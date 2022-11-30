@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import data from './data';
+import Tile from './components/Tile';
+import NavBar from './components/NavBar';
 
 function App() {
+  const tiles = data.map(item => {
+    return (
+      <Tile 
+          key={item.startDate}
+          item={item}
+      />
+    )
+  })
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar src="../images/EarthIcon.png" title="my travel journal."/>
+      {tiles}
     </div>
   );
 }
