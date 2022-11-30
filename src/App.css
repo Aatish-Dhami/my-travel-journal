@@ -1,12 +1,21 @@
 .App {
   display: block;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
   width: 650px;
+  box-shadow: 7px 7px 20px #888888;
+  border-radius: 10px;
+  /* border-style: solid; */
 }
 
 .navbar {
   background: #F55A5A;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
   height: 55px;
   display: flex;
   justify-content: center;
